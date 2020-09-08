@@ -299,7 +299,7 @@ class SaleOrderImportMapper(Component):
             return
 
         carrier = self.env['delivery.carrier'].search(
-            [('magento_code', '=', ifield)],
+            [('magento_carrier_code', '=', ifield)],
             limit=1,
         )
         if carrier:
